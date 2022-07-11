@@ -2,24 +2,25 @@
 
 const removeFromArray = function() {
 
-    const array = arguments[0]
+    const new_array = arguments[0]
+    len = arguments[0].length
     
-    for (let i=1; i < array.length; i++) {
+    for (let i=1; i < len+1; i++) {
         
-        if (array.includes(arguments[i])) {
-            let index = array.indexOf(arguments[i]);
-            array.splice(index,1);
+        if (new_array.includes(arguments[i])) {
+            let index = new_array.indexOf(arguments[i]);
+            new_array.splice(index,1);
         }
         else {
             continue
         }
     }
 
-    console.log(array)
-    return array
+    console.log(new_array)
+    return new_array
 }
 
-removeFromArray([1, 2, 3, 4], 1, 2, 3, 4)
+//removeFromArray([1, 2, 3, 4], 1, 2, 3, 4)
 
 // Do not edit below this line
 module.exports = removeFromArray;
